@@ -9,9 +9,18 @@ function Transactions() {
             .then((data) => {
                 setTransactionsData(data)
             })
-    }, [transactionsData])
+    }, [])
 
-    console.log(transactionsData)
+    const displayTransactionsData = transactionsData.map((transaction) => {
+        return (
+                    <tr key={transaction.id}>
+                        <td>{transaction.date}</td>
+                        <td>{transaction.description}</td>
+                        <td>{transaction.category}</td>
+                        <td>{transaction.amount}</td>
+                    </tr>
+        )
+    })
 
     return (
         <div>
@@ -25,18 +34,7 @@ function Transactions() {
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>2019-12-01</td>
-                        <td>Paycheck from Bob's Burgers</td>
-                        <td>Income</td>
-                        <td>1000</td>
-                    </tr>
-                    <tr>
-                        <td>2019-12-01</td>
-                        <td>South by Southwest Quinoa Bowl at Fresh & Co</td>
-                        <td>Food</td>
-                        <td>10.55</td>
-                    </tr>
+                    {displayTransactionsData}
                 </tbody>
                 
             </table>
