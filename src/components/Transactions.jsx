@@ -1,14 +1,17 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 function Transactions() {
     const [transactionsData, setTransactionsData] = useState([])
 
-    fetch('http://localhost:3000/transactions')
-        .then((response) => response.json())
-        .then((data) => {
-            transactionsData = data;
-        })
+    useEffect(() => {
+        fetch('http://localhost:3000/transactions')
+            .then((response) => response.json())
+            .then((data) => {
+                setTransactionsData(data)
+            })
+    }, [transactionsData])
 
+    console.log(transactionsData)
 
     return (
         <div>
