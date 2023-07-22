@@ -13,6 +13,7 @@ function TransactionSearch({ transactionsData, setTransactionsData }) {
         })
 
         console.log(filteredTransactions)
+        setTransactionsData(filteredTransactions)
     }
 
     const onInputChange = (event) => {
@@ -22,7 +23,7 @@ function TransactionSearch({ transactionsData, setTransactionsData }) {
     return (
         <div>
             <form onSubmit={onFormSubmit}>
-                <input className="search_input" type="text" onChange={onInputChange} value={searchTerm} placeholder="search by description" />
+                <input className="search_input" type="text" onChange={onInputChange} value={searchTerm} placeholder="Search by description" />
                 <button>Search</button>
             </form>
         </div>
