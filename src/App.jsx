@@ -1,16 +1,23 @@
-import {useState} from 'react'
-import reactLogo from './assets/react.svg'
+import {useState, useEffect} from 'react'
 import './App.css'
 import Transactions from "./components/Transactions"
 import TransactionsForm from './components/TransactionForm'
 
 function App() {
-    const [count, setCount] = useState(0)
+    const [transactionsData, setTransactionsData] = useState([])
+
+    useEffect(() => {
+        fetch('http://localhost:3000/transactions')
+            .then((response) => response.json())
+            .then((data) => {
+                setTransactionsData(data)
+            })
+    }, [])
 
     return (
         <div>
             <div className="transactions_table_form">
-                <Transactions  /> 
+                <Transactions transactionsData={transactionsData} /> 
                 <div className="form_wrapper">
                     <TransactionsForm/>
                 </div>

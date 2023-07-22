@@ -1,15 +1,6 @@
 import { useState, useEffect } from 'react'
 
-function Transactions() {
-    const [transactionsData, setTransactionsData] = useState([])
-
-    useEffect(() => {
-        fetch('http://localhost:3000/transactions')
-            .then((response) => response.json())
-            .then((data) => {
-                setTransactionsData(data)
-            })
-    }, [])
+function Transactions({ transactionsData }) {
 
     const displayTransactionsData = transactionsData.map((transaction) => {
         return (
