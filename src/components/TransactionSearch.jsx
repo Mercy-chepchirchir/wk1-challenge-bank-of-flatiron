@@ -7,12 +7,11 @@ function TransactionSearch({ transactionsData, setTransactionsData }) {
         event.preventDefault();
 
         const filteredTransactions = transactionsData.filter((transaction) => {
-            if (transaction.description.includes(searchTerm)) {
+            if (transaction.description.toLowerCase().includes(searchTerm.toLowerCase())) {
                 return transaction
             }
         })
 
-        console.log(filteredTransactions)
         setTransactionsData(filteredTransactions)
     }
 
