@@ -12,10 +12,11 @@ function TransactionsForm({ transactionsData, setTransactionsData }) {
     const onFormSubmit = (event) => {
         event.preventDefault();
 
+        console.log(formDetails)
     }
 
     const changeFormDetails = (event) => {
-        console.log(event.target.value)
+        setFormDetails({...formDetails, [event.target.name]: event.target.value})
     }
 
     return (
@@ -33,12 +34,12 @@ function TransactionsForm({ transactionsData, setTransactionsData }) {
 
             <div>
                 <label htmlFor="category">Category</label>
-                <input id="category" type="text" onChange={changeFormDetails} />
+                <input id="category" type="text" name="category" onChange={changeFormDetails} />
             </div>
 
             <div>
                 <label htmlFor="amount">Amount</label>
-                <input id="amount" type="text" onChange={changeFormDetails} />
+                <input id="amount" type="text" name="amount" onChange={changeFormDetails} />
             </div>
 
             <button type="submit">Submit</button>
