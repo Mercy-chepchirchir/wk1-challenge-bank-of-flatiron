@@ -1,6 +1,8 @@
-function TransactionSearch({ transactionData, setTransactions }) {
+function TransactionSearch({ transactionsData, setTransactions }) {
     const onFormSubmit = (event) => {
-        event.preventDefault
+        event.preventDefault();
+
+        console.log(transactionsData)
     }
     
     return (
