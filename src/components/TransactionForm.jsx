@@ -5,14 +5,21 @@ function TransactionsForm({ transactionsData, setTransactionsData }) {
         date: "",
         description: "",
         category: "",
-        amount: 0
+        amount: 0,
     })
 
 
     const onFormSubmit = (event) => {
         event.preventDefault();
+        // console.log(formDetails)
 
-        console.log(formDetails)
+        const updatedFormDetails = {...formDetails, id: transactionsData.length + 1}
+
+        const updatedTransactionsData = [...transactionsData, updatedFormDetails]
+
+        console.log(updatedTransactionsData)
+
+        setTransactionsData(updatedTransactionsData)
     }
 
     const changeFormDetails = (event) => {
