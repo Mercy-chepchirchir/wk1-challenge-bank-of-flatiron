@@ -71,9 +71,25 @@
 /* Transaction table and form */
 .transactions_table_form {
   display: flex;
+
 }
 
 .form_wrapper {
   margin: 25px;
+}
 
+/* transactions form */
+input, textarea {
+  border: 1px solid #333;
+  display: block;
+  margin-bottom: 25px;
+  width: 100%;
+  padding: 0.5rem 0.5rem;
+}
+
+label {
+  font: sans-serif;
+  margin-bottom: 3px;
+  display: block;
+  text-align: left;
 }

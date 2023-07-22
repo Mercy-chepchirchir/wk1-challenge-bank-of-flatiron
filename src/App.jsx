@@ -10,7 +10,7 @@ function App() {
     return (
         <div>
             <div className="transactions_table_form">
-                <Transactions/> 
+                <Transactions  /> 
                 <div className="form_wrapper">
                     <TransactionsForm/>
                 </div>
