@@ -1,7 +1,13 @@
-function TransactionsForm() {
+function TransactionsForm({ transactionsData, setTransactionsData }) {
+
+    const onFormSubmit = (event) => {
+        event.preventDefault();
+
+        console.log("form submitted")
+    }
 
     return (
-        <form>
+        <form onSubmit={onFormSubmit}>
             <h2>Add Transaction</h2>
             <div>
                 <label>Date</label>

@@ -1,6 +1,6 @@
 import {useState, useEffect} from 'react'
 import './App.css'
-import Transactions from "./components/Transactions"
+import TransactionsTable from "./components/TransactionsTable"
 import TransactionsForm from './components/TransactionForm'
 
 function App() {
@@ -17,9 +17,9 @@ function App() {
     return (
         <div>
             <div className="transactions_table_form">
-                <Transactions transactionsData={transactionsData} /> 
+                <TransactionsTable transactionsData={transactionsData} /> 
                 <div className="form_wrapper">
-                    <TransactionsForm/>
+                    <TransactionsForm transactionsData={transactionsData} setTransactionsData={setTransactionsData} />
                 </div>
             </div>
         </div>

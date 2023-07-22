@@ -1,6 +1,4 @@
-import { useState, useEffect } from 'react'
-
-function Transactions({ transactionsData }) {
+function TransactionsTable({ transactionsData }) {
 
     const displayTransactionsData = transactionsData.map((transaction) => {
         return (
@@ -27,11 +25,9 @@ function Transactions({ transactionsData }) {
                 <tbody>
                     {displayTransactionsData}
                 </tbody>
-                
             </table>
-            
         </div>
     )
 }
 
-export default Transactions;
+export default TransactionsTable;
