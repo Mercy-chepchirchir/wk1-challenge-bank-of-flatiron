@@ -6,7 +6,13 @@ function TransactionSearch({ transactionsData, setTransactionsData }) {
     const onFormSubmit = (event) => {
         event.preventDefault();
 
-        console.log(searchTerm)
+        const filteredTransactions = transactionsData.filter((transaction) => {
+            if (transaction.description.includes(searchTerm)) {
+                return transaction
+            }
+        })
+
+        console.log(filteredTransactions)
     }
 
     const onInputChange = (event) => {
