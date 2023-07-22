@@ -38,7 +38,7 @@ function TransactionsForm({ transactionsData, setTransactionsData }) {
     }
 
     return (
-        <form onSubmit={onFormSubmit}>
+        <form className="transaction_form" onSubmit={onFormSubmit}>
             <h2>Add Transaction</h2>
             <div>
                 <label htmlFor="date">Date</label>
