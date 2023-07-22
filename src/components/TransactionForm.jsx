@@ -1,4 +1,7 @@
+import { useState } from 'react'
+
 function TransactionsForm({ transactionsData, setTransactionsData }) {
+    const [category, setCategory] = useState("")
 
     const onFormSubmit = (event) => {
         event.preventDefault();
@@ -11,7 +14,9 @@ function TransactionsForm({ transactionsData, setTransactionsData }) {
             <h2>Add Transaction</h2>
             <div>
                 <label>Date</label>
-                <input type="date" />
+                <input 
+                    type="date" 
+                />
             </div>
 
             <div>
@@ -21,7 +26,7 @@ function TransactionsForm({ transactionsData, setTransactionsData }) {
 
             <div>
                 <label>Category</label>
-                <input type="text" />
+                <input type="text" onChange={(event) => {setCategory(event.target.value)}} value={category} />
             </div>
 
             <div>
