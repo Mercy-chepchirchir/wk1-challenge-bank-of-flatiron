@@ -13,25 +13,22 @@ function TransactionsForm({ transactionsData, setTransactionsData }) {
         <form onSubmit={onFormSubmit}>
             <h2>Add Transaction</h2>
             <div>
-                <label for="date">Date</label>
-                <input 
-                    id="date"
-                    type="date" 
-                />
+                <label htmlFor="date">Date</label>
+                <input id="date" type="date"/>
             </div>
 
             <div>
-                <label for="description">Description</label>
+                <label htmlFor="description">Description</label>
                 <textarea id="description" />
             </div>
 
             <div>
-                <label for="category">Category</label>
+                <label htmlFor="category">Category</label>
                 <input id="category" type="text" onChange={(event) => {setCategory(event.target.value)}} value={category} />
             </div>
 
             <div>
-                <label for="amount">Amount</label>
+                <label htmlFor="amount">Amount</label>
                 <input id="amount" type="text" />
             </div>
 
