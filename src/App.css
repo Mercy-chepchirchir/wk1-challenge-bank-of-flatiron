@@ -67,3 +67,13 @@
 }
 
 
+
+/* Transaction table and form */
+.transactions_table_form {
+  display: flex;
+}
+
+.form_wrapper {
+  margin: 25px;
+
+}
