@@ -3,7 +3,7 @@ function TransactionsForm({ transactionsData, setTransactionsData }) {
     const onFormSubmit = (event) => {
         event.preventDefault();
 
-        console.log("form submitted")
+        
     }
 
     return (
