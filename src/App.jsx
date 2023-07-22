@@ -18,7 +18,7 @@ function App() {
     return (
         <div>
             <div>
-                <TransactionSearch />
+                <TransactionSearch transactionsData={transactionsData} setTransactionsData={setTransactionsData} />
             </div>
 
             <div className="transactions_table_form">
