@@ -1,12 +1,13 @@
 function TransactionsTable({ transactionsData }) {
 
-    const displayTransactionsData = transactionsData.map((transaction) => {
+    const displayTransactionsData = transactionsData.map(({id ,date ,description, category, amount}) => {
+        
         return (
-                    <tr key={transaction.id}>
-                        <td>{transaction.date}</td>
-                        <td>{transaction.description}</td>
-                        <td>{transaction.category}</td>
-                        <td>{transaction.amount}</td>
+                    <tr key={id}>
+                        <td>{date}</td>
+                        <td>{description}</td>
+                        <td>{category}</td>
+                        <td>{amount}</td>
                     </tr>
         )
     })
