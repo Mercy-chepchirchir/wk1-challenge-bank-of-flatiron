@@ -17,7 +17,7 @@ function TransactionsForm({ transactionsData, setTransactionsData }) {
         // console.log(formDetails)
         // console.log(transactionsData)
 
-        // copy formDetails and add new key-value id
+        // copy formDetails and add new key-value id and used parseint to change amount to an integer
         const updatedFormDetails = {...formDetails, amount: parseInt(amount), id: transactionsData.length + 1}
 
         // copy objects from transactionsData and add the new updatedFormDetails to create new list
