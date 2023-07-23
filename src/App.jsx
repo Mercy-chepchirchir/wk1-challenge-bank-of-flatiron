@@ -9,7 +9,7 @@ function App() {
 
     //useeffect will run depending on dependency list ,if you want it to run once use an empty list/leave the dependency list an empty.
     useEffect(() => {
-        fetch('http://localhost:3000/transactions')
+        fetch('https://api.npoint.io/24be302473f259de6aaf/transactions')
             .then((response) => response.json())
             .then((data) => {
                 setTransactionsData(data)
