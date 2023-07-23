@@ -22,7 +22,7 @@ function TransactionSearch({ transactionsData, setTransactionsData }) {
     return (
         <div>
             <form onSubmit={onFormSubmit}>
-                <input className="search_input" type="text" onChange={onInputChange} value={searchTerm} placeholder="Search by description" />
+                <input id="search_input" className="search_input" type="text" onChange={onInputChange} value={searchTerm} placeholder="Search by description" />
                 <button>Search</button>
             </form>
         </div>
