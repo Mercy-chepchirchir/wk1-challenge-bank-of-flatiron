@@ -5,7 +5,7 @@ function TransactionsForm({ transactionsData, setTransactionsData }) {
         date: "",
         description: "",
         category: "",
-        amount: 0,
+        amount: "",  
     })
 
     const { date, description, category, amount } = formDetails;
@@ -13,14 +13,17 @@ function TransactionsForm({ transactionsData, setTransactionsData }) {
 
     const onFormSubmit = (event) => {
         event.preventDefault();
+
         // console.log(formDetails)
+        // console.log(transactionsData)
 
         // copy formDetails and add new key-value id
-        const updatedFormDetails = {...formDetails, id: transactionsData.length + 1}
+        const updatedFormDetails = {...formDetails, amount: parseInt(amount), id: transactionsData.length + 1}
 
+        // copy objects from transactionsData and add the new updatedFormDetails to create new list
         const updatedTransactionsData = [...transactionsData, updatedFormDetails]
 
-        // console.log(updatedTransactionsData)
+        console.log(updatedTransactionsData)
 
         setTransactionsData(updatedTransactionsData)
 
@@ -29,7 +32,7 @@ function TransactionsForm({ transactionsData, setTransactionsData }) {
             date: "",
             description: "",
             category: "",
-            amount: 0
+            amount: ""
         })
     }
 
@@ -52,7 +55,7 @@ function TransactionsForm({ transactionsData, setTransactionsData }) {
 
             <div>
                 <label htmlFor="category">Category</label>
-                <input id="category" type="text" name="category" onChange={changeFormDetails} value={category}/>
+                <input id="category" type="text" name="category" onChange={changeFormDetails} value={category} />
             </div>
 
             <div>
